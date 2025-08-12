@@ -13,21 +13,3 @@ pub use sieve_model::SieveModel;
 pub use sort_order::SortOrder;
 pub use sort_term::SortTerm;
 pub use paged_list::PagedList;
-
-pub trait SieveFilter {
-    type Output;
-
-    fn filter_with(self, sieve: &SieveModel) -> Self::Output;
-}
-
-pub trait SieveOrder {
-    type Output;
-
-    fn order_with(self, sieve: &SieveModel) -> Self::Output;
-}
-
-pub trait SievePaginate {
-    type Output;
-
-    fn paginate_with(self, sieve: &SieveModel) -> Self::Output;
-}
